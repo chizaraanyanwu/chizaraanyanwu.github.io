@@ -1,0 +1,56 @@
+:root {
+  /* Color palette */
+  --main-col: hsl(198, 52%, 37%);
+  --bg-col: hsl(41, 100%, 97%);
+  --sec-col: hsl(193, 47%, 44%);
+  --comp-red-col: hsl(5, 62%, 51%);
+  --comp-highlight-col: hsl(29, 74%, 74%);
+}
+
+/* Simple styling on sections */
+section {
+  flex: 1;
+  max-width: 45%; /* Adjust width to avoid layout issues */
+}   
+main {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping for align-content to work */
+  align-content: center;
+  justify-content: space-around;
+  width: 100%;
+}           
+aside {
+  flex: 1;
+  max-width: 45%; /* Matches section for balanced layout */
+}   
+form {
+  background-color: var(--comp-highlight-col);
+  padding: 1em;
+}
+input {
+  display: block;
+  width: 100%;
+  margin-bottom: 2em;
+  border: none;
+  background-color: var(--comp-highlight-col);
+  border-bottom: 2px solid hsl(300, 100%, 10%);
+  border-radius: 5px;
+  color: black; /* Ensure text is readable */
+}
+
+input[type=submit] {
+  width: 10vw;
+  padding: 1em;
+  color: var(--bg-col);
+  border: 2px solid var(--comp-highlight-col);
+  background-color: var(--comp-red-col);
+}
+input:focus {
+  background-color: hsl(29, 74%, 80%);
+  /* outline: 2px solid var(--main-col); Improved accessibility */
+}
+@media (max-width: 600px) {
+  main {
+    flex-wrap: wrap;
+  }
+}

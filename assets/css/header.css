@@ -1,0 +1,41 @@
+:root {
+  /* Color palette */
+  --main-col: hsl(198, 52%, 37%);
+  --bg-col: hsl(41, 100%, 97%);
+  --sec-col: hsl(193, 47%, 44%);
+  --comp-red-col: hsl(5, 65%, 47%);
+  --comp-highlight-col: hsl(29, 74%, 74%);
+}
+
+nav {
+  background-color: var(--main-col);
+  /* height: 10vh; */
+  width: 100%;
+}
+
+ul { 
+  list-style: none;
+  /* margin: 0;
+  padding: 0; */
+}
+
+li {
+  display: inline-block;
+  margin: 1em 3em; 
+  padding: 1em;
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--bg-col);
+  transition: color, background-color 0.5s ease-in-out;
+}
+
+li:hover {
+  background-color: var(--sec-col);
+}
+
+li:hover a {
+  color: black;
+}
