@@ -1,0 +1,39 @@
+:root {
+  /* Color pallete  */
+  --main-col: hsl(198, 52%, 37%);
+  --bg-col: hsl(41, 100%, 97%);
+  --sec-col: hsl(193, 47%, 44%);
+  --comp-red-col: hsl(5, 62%, 51%);
+  --comp-highlight-col: hsl(29, 74%, 74%);
+}
+
+/* Style for scrollbars */
+main {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+main::-webkit-scrollbar-track {
+  background-color: var(--bg-col); /* Track background color */
+}
+
+main {
+  scrollbar-width: thin; /* Slim scrollbar for Firefox */
+  scrollbar-color: hsl(0, 2%, 12%) #f0f0f0; /* Thumb and track colors */
+}
+
+/* Section styling */
+section {
+  scroll-snap-align: start;
+  height: 70vh;
+  background-color: var(--sec-col);
+  border-radius: 10px;
+  margin: 1.75em;
+  padding: 1em;
+  opacity: 0.7;
+}
+
+#video-game, #blender {
+  background-color: var(--comp-highlight-col);
+}

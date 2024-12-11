@@ -6,31 +6,53 @@
   <title>Contact me</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../assets/css/contact.css">
-  <link rel="stylesheet" href="../assets/css/main.css">
+  <!-- <link rel="stylesheet" href="../assets/css/main.css"> -->
   <link rel="stylesheet" href="../assets/css/header.css">
 <body>
   <header> 
-    <nav></nav>
+    <!-- Nav bar  -->
+    <nav>
+      <ul>
+        <li><a href="../index.html">Homepage</a></li>
+        <li><a href="./projects.html">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
     <h1>Contact me!</h1>  
   </header>
   <main>
     <section>
       <form method="get">
         <!-- User's name  -->
+        <i class="fa fa-user" aria-hidden="true"></i>
         <label for="user-name">Name: </label>
         <input type="text" name="name" id="user-name" required>
         <!-- Email  -->
+        <i class="fa fa-envelope" aria-hidden="true"></i>
         <label for="user-email">Email</label>
         <input type="email" name="email" id="user-email">
         <!-- Phone number  -->
+        <i class="fa fa-phone" aria-hidden="true"></i>
         <label for="user-number">Phone Number</label>
         <input type="tel" name="ph-number" id="user-number">
         <input type="submit" value="Submit">
       </form>
     </section>
     <!-- Contains aside content (icon/animation) -->
-    <aside></aside>
+    <aside>
+      <figure>
+        <img src="../assets/images/isometric-bakery.PNG" alt="Gif of letter opening and closing">
+      </figure>
+    </aside>
   </main>
-  <footer></footer>
+  <!-- Footer  -->
+  <footer>
+    <h2>Talk to me</h2>
+    <!-- Contact information  -->
+    <ul>
+      <li><i class="fa fa-phone"></i> Phone number: 204-881-5900</li>
+      <li> <i class="fa fa-envelope"></i> Email: anyanwuchizara09@gmail.com</li>
+    </ul>
+  </footer>
 </body>
 </html>

@@ -1,41 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300&family=Rubik:wght@400;500;700&display=swap");
+
+/* Like this font  */
+
+/* Defining global css variables */
 :root {
-  /* Color palette */
+  /* Color pallete  */
   --main-col: hsl(198, 52%, 37%);
   --bg-col: hsl(41, 100%, 97%);
   --sec-col: hsl(193, 47%, 44%);
-  --comp-red-col: hsl(5, 65%, 47%);
+  --comp-red-col: hsl(5, 62%, 51%);
   --comp-highlight-col: hsl(29, 74%, 74%);
 }
+/* Basic reset  */
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Serif Display', serif;
 
+}
+
+/* Styling on background and default  */
+body {
+  font-size: 1.8vw;
+  background-color: var(--bg-col);
+}
+/* Default styling on all sections  */
+section {
+  padding: 1em;
+}
+
+/* Heading styles  */
+h1 {
+  font-size: 5vw;
+  margin: 0.25em;
+  text-align: center;
+}
+
+h2 {
+  padding: 0.5em;
+  font-size: 2.5vw;
+  text-transform: capitalize;
+}
+/* Font styling on basic text  */
+p {
+  font-size: 1.8vw;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
 nav {
   background-color: var(--main-col);
   /* height: 10vh; */
   width: 100%;
 }
-
-ul { 
+/* List styling  */
+nav ul { 
   list-style: none;
   /* margin: 0;
   padding: 0; */
 }
-
-li {
+/* Styling list objects  */
+nav li {
   display: inline-block;
   margin: 1em 3em; 
   padding: 1em;
   border-radius: 10px;
+  transition: color, background-color 0.5s ease-in-out;
 }
-
-a {
+/* Styling actual links  */
+nav a {
   text-decoration: none;
   color: var(--bg-col);
   transition: color, background-color 0.5s ease-in-out;
 }
-
-li:hover {
+/* Transition behaviour  */
+nav li:hover {
   background-color: var(--sec-col);
 }
+nav li:hover a {
+  text-decoration: underline;
+}
 
-li:hover a {
-  color: black;
+
+/* All code for footer  */
+footer {
+  margin: 1.5em 0;
+}
+footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+/* Removed bullets on list and added spacing  */
+footer li {
+  list-style: none;
+  display: inline;
+  text-align: center;
+  margin: 1%;
+}
+/* Simple margin on footer information  */
+footer h2 {
+  margin: 0.5em;
 }

@@ -10,32 +10,36 @@
 /* Simple styling on sections */
 section {
   flex: 1;
-  max-width: 45%; /* Adjust width to avoid layout issues */
+  max-width: 45%; 
 }   
 main {
   display: flex;
-  flex-wrap: wrap; /* Allows wrapping for align-content to work */
+  flex-wrap: wrap; 
   align-content: center;
   justify-content: space-around;
   width: 100%;
-}           
+}  
+/* Same flex as section with extra space for margin      */
 aside {
+  height: inherit;
   flex: 1;
-  max-width: 45%; /* Matches section for balanced layout */
+  max-width: 45%; 
 }   
+/* Styling on form  */
 form {
   background-color: var(--comp-highlight-col);
-  padding: 1em;
+  padding: 1.75em;
 }
+/* Styling on all inputs  */
 input {
   display: block;
   width: 100%;
-  margin-bottom: 2em;
+  margin-bottom: 2.75em;
   border: none;
   background-color: var(--comp-highlight-col);
   border-bottom: 2px solid hsl(300, 100%, 10%);
   border-radius: 5px;
-  color: black; /* Ensure text is readable */
+  color: black; 
 }
 
 input[type=submit] {
@@ -45,12 +49,26 @@ input[type=submit] {
   border: 2px solid var(--comp-highlight-col);
   background-color: var(--comp-red-col);
 }
+
 input:focus {
   background-color: hsl(29, 74%, 80%);
-  /* outline: 2px solid var(--main-col); Improved accessibility */
 }
+
 @media (max-width: 600px) {
   main {
     flex-wrap: wrap;
   }
+}
+
+img {
+  width: 100%; 
+  display: block;
+  margin-top: 1.5em;
+  padding: 1em;
+  height: 100%;
+}
+/* Styling on icons  */
+i {
+  margin-right: 0.25em;
+  /* color: var(--sec-col) */
 }
