@@ -1,7 +1,7 @@
 # chizaraanyanwu.github.io
 # Personal Portfolio Website  
 
-(./assets/screenshots/website-preview.png)
+[Screenshot of first page of website with blue nav bar and the word "portfolio" in the middle](./assets/screenshots/website-preview.png)
 
 Welcome to my personal portfolio! This is a way to show my different projects and the technologies I have learnt!
 
@@ -21,7 +21,7 @@ Welcome to my personal portfolio! This is a way to show my different projects an
 
 1. Clone the repository:  
    ```bash  
-   git clone https://github.com/chizaraanyanwu/portfolio-website.git  
+   git clone https://github.com/chizaraanyanwu/chizaraanyanwu.github.io 
 
 2. Change :root css variables:
     You can change them to whatever you want to change the color scheme of the website and adjust it to your needs!
