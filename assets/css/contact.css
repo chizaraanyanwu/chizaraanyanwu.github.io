@@ -5,6 +5,7 @@
   --sec-col: hsl(193, 47%, 44%);
   --comp-red-col: hsl(5, 62%, 51%);
   --comp-highlight-col: hsl(29, 74%, 74%);
+  --box-shadow: rgba(0, 0, 0, 0.1);
 }
 
 /* Simple styling on sections */
@@ -29,11 +30,14 @@ aside {
 form {
   background-color: var(--comp-highlight-col);
   padding: 1.75em;
+  box-shadow: 0 4px 8px var(--box-shadow);
+
 }
 /* Styling on all inputs  */
 input {
   display: block;
   width: 100%;
+  height: 8vh;
   margin-bottom: 2.75em;
   border: none;
   background-color: var(--comp-highlight-col);
@@ -41,34 +45,41 @@ input {
   border-radius: 5px;
   color: black; 
 }
-
+/* Styling on submit button  */
 input[type=submit] {
   width: 10vw;
+  font-size: 1.2vw;
   padding: 1em;
   color: var(--bg-col);
   border: 2px solid var(--comp-highlight-col);
   background-color: var(--comp-red-col);
 }
-
+/* Inputs on focus  */
 input:focus {
   background-color: hsl(29, 74%, 80%);
 }
 
 @media (max-width: 600px) {
   main {
-    flex-wrap: wrap;
+    flex-flow: wrap column;
   }
 }
-
 img {
-  width: 100%; 
-  display: block;
-  margin-top: 1.5em;
-  padding: 1em;
+  width: 100%;
   height: 100%;
+}
+figcaption {
+  font-size: 1vw;
 }
 /* Styling on icons  */
 i {
   margin-right: 0.25em;
-  /* color: var(--sec-col) */
+}
+/* Simple styling on small sun  */
+img#sun{
+  width: 2vw;
+  height: 2vw;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
 }

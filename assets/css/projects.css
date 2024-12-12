@@ -5,35 +5,117 @@
   --sec-col: hsl(193, 47%, 44%);
   --comp-red-col: hsl(5, 62%, 51%);
   --comp-highlight-col: hsl(29, 74%, 74%);
+  --box-shadow: rgba(0, 0, 0, 0.1);
+  --dark-white: #f0f0f0;
 }
+/* Media query for dark mode   */
+@media(prefers-color-scheme:dark)  {
+  :root {
+    /* Color pallete  */
+    --main-col: hsl(198, 52%, 37%);
+    --bg-col: hsl(0, 0%, 7%);
+    --sec-col: hsl(193, 47%, 44%);
+    --comp-red-col: hsl(5, 62%, 51%);
+    --comp-highlight-col: hsl(29, 74%, 74%);
+    --box-shadow: rgba(237, 237, 237, 0.1);
+    --font-col: rgb(228,228,228);
 
-/* Style for scrollbars */
-main {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
-}
+  }
+  h1, 
+  h2 {
+    color: var(--font-col);
 
-main::-webkit-scrollbar-track {
-  background-color: var(--bg-col); /* Track background color */
-}
+  }
+  p {
+    color: var(--bg-col);
+  }
 
-main {
-  scrollbar-width: thin; /* Slim scrollbar for Firefox */
-  scrollbar-color: hsl(0, 2%, 12%) #f0f0f0; /* Thumb and track colors */
 }
 
 /* Section styling */
 section {
-  scroll-snap-align: start;
-  height: 70vh;
-  background-color: var(--sec-col);
+  height: auto;
+  background-color: var(--dark-white);
+  border: 2px solid var(--sec-col);
   border-radius: 10px;
   margin: 1.75em;
   padding: 1em;
-  opacity: 0.7;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-#video-game, #blender {
-  background-color: var(--comp-highlight-col);
+
+/* Images make a slideshow thats floated to the left */
+.scroll-container {
+  background-color: var(--neut-colour-1);
+  overflow-y: clip;
+  overflow-x: scroll;
+  white-space: nowrap;
+  margin-right: 1em;
+  width: 40%; 
+  height: 80%;
+  flex: 1;
 }
+/* Make figure and other text the same width (flex basis ) */
+figure { 
+  flex: 1;
+}
+/* Styling video box  */
+video {
+  width: 100%;
+  height: 100%;
+}
+/* All images in the slideshow are full size  */
+.scroll-container img , img{
+  width: 100%;
+  /* height: 100%; */
+}
+ /* Paragraphs next to slideshow have padding on top  */
+p {
+  flex: 1;
+  margin-left: 1em;
+}
+/* Code styling scrollbar on all scroll containers  */
+/* width of scrollbar*/
+.scroll-container::-webkit-scrollbar {
+  width: 5px;
+}
+/* Track of scrollbar*/
+.scroll-container::-webkit-scrollbar-track {
+  background: var(--neut-colour-1); 
+  border-radius: 50%;
+}
+/* Handle */
+.scroll-container::-webkit-scrollbar-thumb {
+  background: var(--neut-colour-2); 
+  border-radius: 10px;
+}
+/* Handle on hover */
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: var(--sec-colour-2); 
+}
+
+/* Back to top button  */
+#back-to-top {
+  position: fixed;
+  bottom: 2em; 
+  right: 2em; 
+  width: 3em; 
+  height: 3em; 
+  border-radius: 50%; 
+  padding: 0.5em; 
+  color: var(--bg-col);
+  background-color: var(--comp-highlight-col); 
+  box-shadow: 0 2px 5px var(--box-shadow); /* Subtle shadow for depth */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth background-color transition */
+}
+/* Back to top hover  */
+#back-to-top:hover {
+  background-color: var(--comp-red-col); /* Darker shade on hover */
+}
+
