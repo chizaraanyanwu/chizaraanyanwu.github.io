@@ -10,6 +10,33 @@
   --dark-white: #f0f0f0;
 
 }
+/* Defining global css variables */
+:root {
+  /* Color pallete  */
+  --main-col: hsl(198, 52%, 37%);
+  --bg-col: hsl(41, 100%, 97%);
+  --sec-col: hsl(193, 47%, 44%);
+  --comp-red-col: hsl(5, 62%, 51%);
+  --comp-highlight-col: hsl(29, 74%, 74%);
+  --box-shadow: hsla(0, 0%, 0%, 0.1);
+  --dark-white: hsl(0, 0%, 94%);
+}
+/* Dark mode styling  */
+
+/* Media query for dark mode   */
+@media(prefers-color-scheme:dark)  {
+  :root {
+  /* Color palette */
+  --main-col: hsl(198, 75%, 76%); 
+  --bg-col: hsl(210, 15%, 12%); 
+  --sec-col: hsl(193, 38%, 58%); 
+  --comp-red-col: hsl(5, 65%, 55%); 
+  --comp-highlight-col: hsl(40, 75%, 65%); 
+  --box-shadow: hsla(0, 0%, 0%, 0.5); 
+  --font-col: hsl(0, 0%, 92%); 
+
+  }
+}
 
 /* Styled the background for the div with opacity to improve readability */
 #bg-img{
@@ -66,7 +93,8 @@ img + h2  {
 }
 
 /* Content in figures */
-#projects img, #projects video {
+#projects img, 
+#projects video {
   width: 100%;
   height: auto;
   border-radius: 5px; 
@@ -76,7 +104,8 @@ img + h2  {
   transform: scale(1.1);
 }
 
-#projects img:hover, video:hover {
+#projects img:hover,
+video:hover {
   opacity: 0.6;
 }
 /* Simple styling on small sun  */
@@ -90,7 +119,8 @@ img:first-of-type{
 
 /* Media query for when the screen gets small  */
 @media(max-width:600px)  {
-  #projects, #intro {
+  #projects, 
+  #intro {
     flex-flow: wrap column;
   }
 

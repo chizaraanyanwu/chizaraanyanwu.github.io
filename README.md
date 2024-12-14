@@ -6,7 +6,7 @@
 Welcome to my personal portfolio! This is a way to show my different projects and the technologies I have learnt!
 
 ## Features  
-- **Home Page**: An introduction showing an overview of my work
+- **Home Page**: An introduction showing an overview of my work. There is a section called projects where you can see an overview of my different projects. Clicking on the different images will lead to the project sections 
 -  **Projects Page**: A display of 4 projects I have made including front-end, back-end, 3D modelling, and video game creation
 -  **Contact Page**: A simple form to reach out to me.  
 - **Sun Motif**: Suns are found all throughout the website and are a personal motif of mine

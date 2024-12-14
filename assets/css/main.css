@@ -12,26 +12,26 @@
   --box-shadow: hsla(0, 0%, 0%, 0.1);
   --dark-white: hsl(0, 0%, 94%);
 }
-/* Dark mode styling  */
+/*Slightly adjusted colors to better fit dark mode  */
 
 /* Media query for dark mode   */
 @media(prefers-color-scheme:dark)  {
   :root {
-    /* Color pallete  */
-    --main-col: hsl(198, 52%, 37%);
-    --bg-col: hsl(0, 0%, 7%);
-    --sec-col: hsl(193, 47%, 44%);
-    --comp-red-col: hsl(5, 62%, 51%);
-    --comp-highlight-col: hsl(29, 74%, 74%);
-    --box-shadow: hsla(0, 0%, 93%, 0.1);
-    --font-col: hsl(0, 0%, 89%);
-
+  /* Color palette */
+  --main-col: hsl(198, 75%, 76%); 
+  --bg-col: hsl(210, 15%, 12%); 
+  --sec-col: hsl(193, 50%, 50%); 
+  --comp-red-col: hsl(5, 65%, 55%); 
+  --comp-highlight-col: hsl(40, 75%, 65%); 
+  --box-shadow: hsla(0, 0%, 0%, 0.5); 
+  --font-col: hsl(0, 0%, 92%); 
   }
+
   p, 
   h1, 
   h2, 
   footer, 
-  nav a{
+  nav li{
     color: var(--font-col);
 
   }
@@ -46,7 +46,10 @@
   font-family: 'Noto Serif Display', serif;
 
 }
-
+/* Smooth scrolling on document  */
+html {
+  scroll-behavior: smooth;
+}
 /* Styling on background and default  */
 body {
   font-size: 1.8vw;
@@ -63,9 +66,10 @@ h1 {
   margin: 0.25em;
   text-align: center;
 }
-
+/* Smaller headings  */
 h2 {
-  padding: 0.5em;
+  padding: 1em;
+  text-decoration: underline var(--sec-col);
   font-size: 2.5vw;
   text-transform: capitalize;
 }
@@ -139,4 +143,13 @@ footer li:hover {
 footer h2 {
   margin: 0.5em 0; 
   font-size: 1.5em; 
+}
+/* Gives suns small animation  */
+img[src="../assets/images/sun.png"] {
+  transition: 1s transform ease-in-out;
+
+}
+img[src="../assets/images/sun.png"]:hover {
+  transform: scale(1.2,1.2);
+
 }

@@ -1,4 +1,4 @@
-Projects.css
+/* Projects.css */
 :root {
   /* Color pallete  */
   --main-col: hsl(198, 52%, 37%);
@@ -13,23 +13,24 @@ Projects.css
 @media(prefers-color-scheme:dark)  {
   :root {
     /* Color pallete  */
-    --main-col: hsl(198, 52%, 37%);
-    --bg-col: hsl(0, 0%, 7%);
-    --sec-col: hsl(193, 47%, 44%);
-    --comp-red-col: hsl(5, 62%, 51%);
-    --comp-highlight-col: hsl(29, 74%, 74%);
-    --box-shadow: rgba(237, 237, 237, 0.1);
-    --font-col: rgb(228,228,228);
-
+    --main-col: hsl(198, 75%, 76%); 
+    --bg-col: hsl(210, 15%, 12%); 
+    --sec-col: hsl(193, 50%, 50%); 
+    --comp-red-col: hsl(5, 65%, 55%); 
+    --comp-highlight-col: hsl(40, 75%, 65%); 
+    --box-shadow: hsla(0, 0%, 0%, 0.5); 
+    --font-col: hsl(0, 0%, 92%); 
+  
   }
   h1, 
   h2 {
     color: var(--font-col);
-
   }
+  /* Giving text readability  */
   p {
     color: var(--bg-col);
   }
+
 
 }
 
@@ -119,11 +120,20 @@ p {
 #back-to-top:hover {
   background-color: var(--comp-red-col); /* Darker shade on hover */
 }
-
+/* All of the small suns  */
 p > img {
   width: 2vw;
   height: 2vw;
   margin: 0;
   padding: 0;
   display: inline-block;
+}
+/* Gives suns small animation  */
+img[src="./assets/images/sun.png"] {
+  transition: 1s transform ease-in-out;
+
+}
+img[src="./assets/images/sun.png"]:hover {
+  transform: scale(1.4,1.4);
+
 }

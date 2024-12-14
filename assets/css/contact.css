@@ -8,7 +8,11 @@
   --comp-highlight-col: hsl(29, 74%, 74%);
   --box-shadow: rgba(0, 0, 0, 0.1);
 }
-
+@media(prefers-color-scheme:dark) {
+  figcaption {
+    color: var(--font-col);
+  }
+}
 /* Simple styling on sections */
 section {
   flex: 1;
@@ -83,4 +87,13 @@ img#sun{
   margin: 0;
   padding: 0;
   display: inline-block;
+}
+/* Gives suns small animation  */
+img[src="../assets/images/sun.png"] {
+  transition: 1s transform ease-in-out;
+
+}
+img[src=".,/assets/images/sun.png"]:hover {
+  transform: scale(1.4,1.4);
+
 }
